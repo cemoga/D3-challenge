@@ -4,41 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <title>D3Times</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/d3Style.css">
- 
 </head>
 
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <h1>D3Times</h1>
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Correlation Between Health Risks and Age, Income</h1>
+        <p style="font-size: 2vw">Use the interactive plot below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12  col-md-9">
+      <div class="col-xs-12 col-md-12">
+        <h1 style="font-size: 1.5vw; padding-top: 2%;">Correlation Between Health Risk Factors, such as: Obesity,
+          Smoking, Lack of Healthcare</h1>
+        <h1 style="font-size: 1.5vw">and Poverty, Age and Income</h1>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
         <div id="scatter">
           <!-- We append our chart here. -->
         </div>
       </div>
     </div>
+    <hr>
     <div class="row">
-      <div class="col-xs-12  col-md-9">
+      <div class="col-xs-12  col-md-12">
         <div class="article">
-          <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <h2><u>Correlations Discovered Between Health Risks and Age, Income</u></h2>
+          <br>
+          <h4>Highlights:</h4>
+          <hr>
+          <ul>It seems to be the case that the more poor households by state,
+            the bigger the risk of obesity. But there are some exceptions like DC,
+            where a high rate of poverty does not translate into a high rate of obesity.
+            In fact, DC has the second-lowest rate of obesity in the country.
+            This could lead us to consider additional factors that also affect obesity.</ul>
+          <ul>From the plot, there is no clear relation between the age and the willingness to smoke. The data is spread
+            all over the spectrum. Most of the smoking data is between the ages of 35 and 41. The state of West Virginia
+            has the highest smoking rate (26.7%), where the average age is 41.9 years. Lousiana is a relatively young
+            state where the average age is 36.1 years, but the smoking population accounts for 24%. </ul>
+          <ul>A clear pattern can be established from the plot: the higher the household income the lower the rate of
+            households with no health insurance. Texas is a big outliner with the highest rate of households with no
+            health insurance (24.9%). The state's household-income-median ($53.035) is about the country's average.</ul>
+          <br><br>
         </div>
       </div>
     </div>
@@ -46,15 +61,26 @@
 
   <!-- Footer-->
   <div id="footer">
-    <p>The Coding Boot Camp&copy;2016</p>
+    <p>© Copyright Cesar Mosquera 2019:</p>
+    <a href="https://www.linkedin.com/in/cesarmosquera/en" target="_blank" style="color: white;"><u>Cesar
+        Mosquera</u></a>
+
+
+
   </div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
-  
+
 
 </body>
 
