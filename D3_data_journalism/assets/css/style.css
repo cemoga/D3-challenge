@@ -39,7 +39,8 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
+
+h2, h3 {
   color: rgb(6, 50, 99);
 }
 

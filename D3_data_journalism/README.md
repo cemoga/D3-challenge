@@ -1,54 +1,33 @@
 # Project D3
 
 ## Project Description
-The goal of the project was to create an app and deploy it to `Heroku` (Cloud Application Platform).
-The app runs a `Flask` server that renders the `index.html` file. The `Javascript` code queries an `sqlite` database, create a chart and plot the data using `D3` and `Plottly` libraries.
-- The app deployed in Heroku can be found in the link below:
-- `https://belly-button-biodiversity-cmg.herokuapp.com`
+The goal of the project is to use the `Javascript-D3` library to create multiple and interactive scatterplots using `HTML`, `CSS`, `Bootstrap`, and `Javascript`. 
+- All the project files are contained in this repo.
 
 ### App Running 
 <hr>
 
-![App Running](Screenshots/Belly_Button_Biodiversity_app.gif "App Running")
+![App Running](Screenshots/factors.gif "App Running")
 <hr>
 
 ### Sample app Screenshot
 <hr> 
 
-![Screenshot](Screenshots/Belly_Button_Biodiversity_app.png "Screenshot")
+![Screenshot](Screenshots/factors.png "Screenshot")
 <hr>
 
 ## Instructions
 
-### Offline
-#### Requirements 
-Install dependencies in your Python environment as described below:
-- pip install gunicorn
-- pip install psycopg2
-- pip install flask
-- pip install flask-sqlalchemy
-- pip install pandas
-
 #### Steps
-1. - Run the `app.py` file with Python which creates a development server.
-2. - While the `app.py` file is running open the route `http://127.0.0.1:5000/`or the one created by running the app.
-
-### Online
-Click the link below or type it in your web browser
-- `https://belly-button-biodiversity-cmg.herokuapp.com`
+1. - Run a python -m http.server or any other server for this purpose.
+2. - Load the `index.html` file.
 
 # File Description
-### - app.py
-- Contains the code to run the `flask`server to run the app
-### - db
-- Contains the `Sqlite` databases queried by the app
-### - Procfile
-- Contains the instructions for `Heroku` to run the app on their server
-### - requirements.txt
-- Contains the libraries for `Heroku`to install in the server to run the app
+### - index.html
+- Contains the html code that drive the plots and references the requiered libraries
+### - Assets
+- Contains the `css` file with the formatting information
+- Contains the `csv` file with the data used to plot
+- Contains the `js` with the `Javascript` code using the D3 library for the interactive plots.
 ### - Screenshots
 - Contains the `gif` and `png` files with screenshots of the app running
-### - Static
-- Contains the `Javascript` code to plot and create tables in the `index.html` file
-### - templates
-- Contains the `html` file with the template to be used by `Javascript` to plot and create tables after the `app.py` file queries the `Sqlite`database

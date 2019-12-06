@@ -13,7 +13,18 @@ function makeResponsive() {
     svgArea.remove();
   }
 
-  var svgWidth = window.innerWidth * 0.85 ;
+
+
+  if (window.innerWidth > 1600) {
+    var svgWidth = window.innerWidth * 0.65;
+  } else if (window.innerWidth > 1200) {
+    var svgWidth = window.innerWidth * 0.80;
+  } else {
+    var svgWidth = window.innerWidth * 0.85;
+  }
+
+
+  console.log(window.innerWidth)
   var svgHeight = window.innerHeight * 0.85;
 
   var margin = {
