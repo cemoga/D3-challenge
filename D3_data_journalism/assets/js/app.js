@@ -84,7 +84,7 @@ function renderXText(textGroup, newXScale, chosenXAxis) {
 
   textGroup.transition()
     .duration(1000)
-    .attr("x", d => newXScale(d[chosenXAxis])-7);
+    .attr("x", d => newXScale(d[chosenXAxis]) - 7);
 
   return textGroup;
 }
@@ -106,7 +106,7 @@ function renderYText(textGroup, newYScale, chosenYAxis) {
 
   textGroup.transition()
     .duration(1000)
-    .attr("y", d => newYScale(d[chosenYAxis])+4);
+    .attr("y", d => newYScale(d[chosenYAxis]) + 4);
 
   return textGroup;
 }
@@ -213,7 +213,7 @@ d3.csv("assets/data/data.csv").then(function (data, err) {
 
 
   // append initial text
-  var textGroup = chartGroup.selectAll("text")
+  var textGroup = chartGroup.selectAll()
     .data(data)
     .enter()
     .append("text")
@@ -222,10 +222,6 @@ d3.csv("assets/data/data.csv").then(function (data, err) {
     .attr("x", d => xLinearScale(d[chosenXAxis]) - 7)
     .attr("y", d => yLinearScale(d[chosenYAxis]) + 4)
     .text(d => d.abbr);
-
-    data.forEach((d) => {
-      console.log(d.state, d.abbr, xLinearScale(d[chosenXAxis]), yLinearScale(d[chosenYAxis]))
-    });
 
   // Create group for  3 x- axis labels
   var labelsXGroup = chartGroup.append("g")
