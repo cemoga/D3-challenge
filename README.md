@@ -1,4 +1,4 @@
-# Project D3
+# Correlation Between Health Risk Factors and Demographics
 
 ## Project Description
 The goal of the project is to use the `Javascript-D3` library to create multiple and interactive scatterplots using `HTML`, `CSS`, `Bootstrap`, and `Javascript`. 
